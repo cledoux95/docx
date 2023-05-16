@@ -3,6 +3,7 @@ import { XmlComponent } from "@file/xml-components";
 import { ConcreteHyperlink, Paragraph } from "../paragraph";
 import { Table } from "../table";
 import { TableOfContents } from "../table-of-contents";
+import { TableOfAuthorities } from "../table-of-authorities";
 import { Body } from "./body";
 import { DocumentAttributes } from "./document-attributes";
 import { DocumentBackground, IDocumentBackgroundOptions } from "./document-background";
@@ -79,7 +80,7 @@ export class Document extends XmlComponent {
         this.root.push(this.body);
     }
 
-    public add(item: Paragraph | Table | TableOfContents | ConcreteHyperlink): Document {
+    public add(item: Paragraph | Table | TableOfContents | TableOfAuthorities | ConcreteHyperlink): Document {
         this.body.push(item);
         return this;
     }

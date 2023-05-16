@@ -7,6 +7,7 @@ export * from "./drawing";
 export * from "./document";
 export * from "./shading";
 export * from "./styles";
+export * from "./table-of-authorities";
 export * from "./table-of-contents";
 export * from "./xml-components";
 export * from "./header-wrapper";

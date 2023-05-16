@@ -4,13 +4,13 @@ import { Paragraph } from "@file/paragraph";
 import { Run } from "@file/paragraph/run";
 import { Begin, End, Separate } from "@file/paragraph/run/field";
 import { FileChild } from "@file/file-child";
-import { TableOfContentsFieldInstruction } from "./table-of-contents-field-instruction";
+import { TableOfAuthoritiesFieldInstruction } from "./table-of-authorities-field-instruction";
 import { StructuredDocumentTagContent } from "../structured-document-tags/sdt-content";
 import { StructuredDocumentTagProperties } from "../structured-document-tags/sdt-properties";
-import { ITableOfContentsOptions } from "./table-of-contents-properties";
+import { ITableOfAuthoritiesOptions } from "./table-of-authorities-properties";
 
-export class TableOfContents extends FileChild {
-    public constructor(alias: string = "Table of Contents", properties?: ITableOfContentsOptions) {
+export class TableOfAuthorities extends FileChild {
+    public constructor(alias: string = "Table of Authorities", properties?: ITableOfAuthoritiesOptions) {
         super("w:sdt");
         this.root.push(new StructuredDocumentTagProperties(alias));
 
@@ -19,7 +19,7 @@ export class TableOfContents extends FileChild {
         const beginParagraph = new Paragraph({
             children: [
                 new Run({
-                    children: [new Begin(true), new TableOfContentsFieldInstruction(properties), new Separate()],
+                    children: [new Begin(true), new TableOfAuthoritiesFieldInstruction(properties), new Separate()],
                 }),
             ],
         });

@@ -5,7 +5,7 @@ import { XmlComponent } from "@file/xml-components";
 
 import { ITableOfContentsOptions } from "./table-of-contents-properties";
 
-export class FieldInstruction extends XmlComponent {
+export class TableOfContentsFieldInstruction extends XmlComponent {
     private readonly properties: ITableOfContentsOptions;
 
     public constructor(properties: ITableOfContentsOptions = {}) {

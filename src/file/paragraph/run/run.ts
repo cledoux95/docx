@@ -2,7 +2,9 @@
 import { XmlComponent } from "@file/xml-components";
 
 import { FootnoteReferenceRun } from "@file/footnotes/footnote/run/reference-run";
-import { FieldInstruction } from "@file/table-of-contents/field-instruction";
+import { TableOfContentsFieldInstruction } from "@file/table-of-contents/table-of-contents-field-instruction";
+import { TableOfAuthoritiesFieldInstruction } from "@file/table-of-authorities/table-of-authorities-field-instruction";
+
 
 import { Break } from "./break";
 import { Begin, End, Separate } from "./field";
@@ -68,7 +70,8 @@ export interface IRunOptions extends IRunPropertiesOptions {
     // </xsd:choice>
     readonly children?: readonly (
         | Begin
-        | FieldInstruction
+        | TableOfContentsFieldInstruction
+        | TableOfAuthoritiesFieldInstruction
         | Separate
         | End
         | PageNumber
